@@ -1,39 +1,33 @@
-# CTA Bus Ridership Daily Trends Analysis
+# New York State Traffic Ticket Analysis
+
+## Overview
+This project analyzes traffic ticket data issued in New York State over a four-year period. It explores patterns and trends in traffic violations across different regions and times, providing insights that could help in traffic management and law enforcement efficiency.
 
 ## Company Description
-The Chicago Transit Authority (CTA) is the second-largest public transportation system in the U.S., serving the city of Chicago and its surrounding suburbs. CTA strives to provide reliable, efficient, and accessible transit services to enhance the quality of life in the Chicago area.
+The New York State Department of Motor Vehicles (NYSDMV) is responsible for vehicle registration, driver licensing, and the adjudication of traffic violations across New York State. The NYSDMV maintains a robust database of traffic tickets issued, which serves as a critical tool for law enforcement and public safety. By analyzing this comprehensive data, NYSDMV aims to enhance road safety, ensure compliance with traffic laws, and reduce traffic-related incidents.
 
 ## Business Problem / Problem Statement
-The CTA aims to utilize detailed daily ridership data to optimize bus route schedules, improve service frequency, and enhance passenger experiences by understanding patterns across different routes and times.
+The NYSDMV seeks to derive actionable insights from the vast amounts of traffic ticket data collected over the years. The objective is to analyze traffic violation patterns, identify high-risk areas, and understand the effectiveness of traffic law enforcement strategies. Insights from this analysis are intended to guide policy adjustments, improve traffic law enforcement, and ultimately enhance road safety across New York State.
 
 ## Functional Requirements
-1. **Ridership Analysis:** Explore daily ridership figures by route to identify trends and demand cycles.
-2. **Peak Traffic Identification:** Analyze traffic to determine high-demand periods across routes.
-3. **Service Optimization:** Use data insights to propose adjustments that improve efficiency and meet passenger needs.
-4. **Compliance and Reporting:** Ensure data accuracy and privacy in reporting, adhering to regulatory standards.
+- **Violation Analysis:** Examine the distribution and frequency of traffic violations to identify common trends and outlier incidents.
+- **Temporal Trends:** Investigate the variation in traffic tickets issued across different times of the day, days of the week, and seasons to determine peak periods of violations.
+- **Geographic Insights:** Map out the geographic distribution of violations to pinpoint high-risk locations and zones of frequent incidents.
+- **Demographic Correlations:** Analyze violator demographic data to assess correlations between violator profiles and types of violations.
+- **Enforcement Effectiveness:** Evaluate the impact of enforcement strategies and the outcomes of traffic tickets on improving road safety.
 
 ## Data Requirements
-- **Data Source:** CTA Ridership - Bus Routes - Daily Totals by Route, sourced from https://catalog.data.gov/dataset/cta-ridership-bus-routes-daily-totals-by-route
-- **Characteristics:** Includes detailed entries of daily bus route usage, necessary for comprehensive service analysis.
-
-## Data Collection Methodology
-This dataset captures daily ridership metrics, reflecting passenger counts and route utilization. The data is gathered from electronic ticketing data and validated against manual counts for accuracy.
-
-## Business Impact
-By analyzing this data, the CTA can:
-- Enhance route planning based on actual usage patterns.
-- Adjust schedules to better align with passenger demand peaks.
-- Improve resource allocation, thereby increasing operational efficiency and passenger satisfaction.
-
-## Project Structure
-- **Data Sourcing:** Automated scripts fetch and store data daily from designated repositories.
-- **Data Transformation:** Use dbt to standardize and clean the data, ensuring it is analysis-ready.
-- **Data Modeling:** Construct a data warehouse in AWS Redshift, organizing data into dimensional models for efficient querying.
-- **Data Analysis and Reporting:** Develop dynamic dashboards in Tableau to visualize trends and support decision-making processes.
+- **Data Source:** Traffic Tickets Issued: Four Year Window dataset from New York State Open Data.
+- **Data Characteristics:** The dataset contains detailed records of every traffic ticket issued, including date, location, violator demographics, and violation type.
+- **Data Collection Methodology:** Data is collected at the point of issuance by law enforcement officers and compiled into the NYSDMV database. The dataset is updated periodically to reflect new data and changes.
+- https://data.ny.gov/Transportation/Traffic-Tickets-Issued-Four-Year-Window/q4hy-kbtf/about_data
+- https://data.ny.gov/api/views/q4hy-kbtf/files/C6gwPCdHCxpNxC0szKY_tXKFORek72pOffkDhBqgFXU?download=true&filename=NYSDMV_Ticket_Data_Overview.pdf
+- https://data.ny.gov/api/views/q4hy-kbtf/files/YpjZeFFvj4Xc5kAgir7bkIx2GfhhKwfOpQUmKvrwWRE?download=true&filename=NYSDMV_OpenData_Tickets_DataDictionary.pdf
 
 ## Technologies Used
-- **Data Storage and Transformation:** AWS S3, dbt
-- **Data Warehousing:** AWS Redshift
-- **Data Visualization:** Tableau
-- **Scripting and Automation:** Python, SQL
+- **Data Storage and Transformation:** Utilizes PostgreSQL for data storage and dbt (Data Build Tool) for data transformation.
+- **Data Analysis:** SQL for structured queries and data manipulation.
+- **Visualization and Reporting:** PowerBI for dynamic, interactive dashboards and visualizations.
+
+
 
