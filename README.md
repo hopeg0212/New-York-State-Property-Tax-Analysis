@@ -1,22 +1,39 @@
 # CTA Bus Ridership Daily Trends Analysis
 
 ## Company Description
-The Chicago Transit Authority (CTA) operates the second largest public transportation system in the United States, serving the City of Chicago and 35 surrounding suburbs. CTA's mission focuses on providing reliable, affordable, and environmentally friendly transit services that connect people, jobs, and communities. The organization is dedicated to improving the efficiency and accessibility of public transport across the region.
+The Chicago Transit Authority (CTA) is the second-largest public transportation system in the U.S., serving the city of Chicago and its surrounding suburbs. CTA strives to provide reliable, efficient, and accessible transit services to enhance the quality of life in the Chicago area.
 
 ## Business Problem / Problem Statement
-The CTA is committed to using detailed daily ridership data to analyze and understand usage patterns across its bus routes. This project aims to identify high-traffic periods and underutilized routes, examine the effectiveness of current scheduling, and suggest optimizations to improve service delivery and rider satisfaction.
+The CTA aims to utilize detailed daily ridership data to optimize bus route schedules, improve service frequency, and enhance passenger experiences by understanding patterns across different routes and times.
 
 ## Functional Requirements
-1. **Ridership Trends Analysis:** Explore daily ridership statistics to uncover consistent patterns or anomalies across different bus routes.
-2. **Peak Hours Identification:** Determine peak and low ridership hours to better align transit services with user demand.
-3. **Route Utilization Assessment:** Assess the performance and utilization of each bus route to enhance route planning and resource allocation.
-4. **Data-Driven Service Improvements:** Use findings to propose modifications aimed at increasing efficiency and enhancing rider experience.
+1. **Ridership Analysis:** Explore daily ridership figures by route to identify trends and demand cycles.
+2. **Peak Traffic Identification:** Analyze traffic to determine high-demand periods across routes.
+3. **Service Optimization:** Use data insights to propose adjustments that improve efficiency and meet passenger needs.
+4. **Compliance and Reporting:** Ensure data accuracy and privacy in reporting, adhering to regulatory standards.
 
 ## Data Requirements
-- **Data Source:** CTA Ridership - Bus Routes - Daily Totals by Route.
-- https://catalog.data.gov/dataset/cta-ridership-bus-routes-daily-totals-by-route
-- **Data Collection Methodology:** This dataset includes comprehensive daily records of passenger boardings, aggregated across all active CTA bus routes.
+- **Data Source:** CTA Ridership - Bus Routes - Daily Totals by Route, sourced from https://catalog.data.gov/dataset/cta-ridership-bus-routes-daily-totals-by-route
+- **Characteristics:** Includes detailed entries of daily bus route usage, necessary for comprehensive service analysis.
+
+## Data Collection Methodology
+This dataset captures daily ridership metrics, reflecting passenger counts and route utilization. The data is gathered from electronic ticketing data and validated against manual counts for accuracy.
 
 ## Business Impact
-Insights from this analysis will enable the CTA to refine bus schedules, adjust service levels according to actual demand, and improve overall operational efficiency. These adjustments are expected to lead to higher passenger satisfaction, better management of resources, and more efficient service delivery.
+By analyzing this data, the CTA can:
+- Enhance route planning based on actual usage patterns.
+- Adjust schedules to better align with passenger demand peaks.
+- Improve resource allocation, thereby increasing operational efficiency and passenger satisfaction.
+
+## Project Structure
+- **Data Sourcing:** Automated scripts fetch and store data daily from designated repositories.
+- **Data Transformation:** Use dbt to standardize and clean the data, ensuring it is analysis-ready.
+- **Data Modeling:** Construct a data warehouse in AWS Redshift, organizing data into dimensional models for efficient querying.
+- **Data Analysis and Reporting:** Develop dynamic dashboards in Tableau to visualize trends and support decision-making processes.
+
+## Technologies Used
+- **Data Storage and Transformation:** AWS S3, dbt
+- **Data Warehousing:** AWS Redshift
+- **Data Visualization:** Tableau
+- **Scripting and Automation:** Python, SQL
 
