@@ -1,33 +1,28 @@
-# New York State Traffic Ticket Analysis
-
-## Overview
-This project analyzes traffic ticket data issued in New York State over a four-year period. It explores patterns and trends in traffic violations across different regions and times, providing insights that could help in traffic management and law enforcement efficiency.
+# Real Property Tax Rates & Levy Data Analysis
 
 ## Company Description
-The New York State Department of Motor Vehicles (NYSDMV) is responsible for vehicle registration, driver licensing, and the adjudication of traffic violations across New York State. The NYSDMV maintains a robust database of traffic tickets issued, which serves as a critical tool for law enforcement and public safety. By analyzing this comprehensive data, NYSDMV aims to enhance road safety, ensure compliance with traffic laws, and reduce traffic-related incidents.
+The New York State Department of Taxation and Finance is responsible for tax collection and administration in New York State. It oversees the compilation and distribution of tax data across municipalities, providing transparent and accessible information to the public. This dataset offers a detailed view of real property tax rates and levy data by municipality, which is essential for financial planning, policy making, and public insight into tax structures.
 
 ## Business Problem / Problem Statement
-The NYSDMV seeks to derive actionable insights from the vast amounts of traffic ticket data collected over the years. The objective is to analyze traffic violation patterns, identify high-risk areas, and understand the effectiveness of traffic law enforcement strategies. Insights from this analysis are intended to guide policy adjustments, improve traffic law enforcement, and ultimately enhance road safety across New York State.
+Understanding the distribution and variance in property tax rates across different municipalities is crucial for both taxpayers and policymakers. The goal is to analyze trends in tax rates and levies over years, identify patterns, and understand the impact of fiscal policies at a local level. This analysis aims to assist in informed decision-making for future tax adjustments and provide clarity to the residents of New York State on their tax contributions.
 
 ## Functional Requirements
-- **Violation Analysis:** Examine the distribution and frequency of traffic violations to identify common trends and outlier incidents.
-- **Temporal Trends:** Investigate the variation in traffic tickets issued across different times of the day, days of the week, and seasons to determine peak periods of violations.
-- **Geographic Insights:** Map out the geographic distribution of violations to pinpoint high-risk locations and zones of frequent incidents.
-- **Demographic Correlations:** Analyze violator demographic data to assess correlations between violator profiles and types of violations.
-- **Enforcement Effectiveness:** Evaluate the impact of enforcement strategies and the outcomes of traffic tickets on improving road safety.
+- **Trend Analysis:** Examine changes in tax rates and levies over the years across municipalities.
+- **Comparative Analysis:** Compare tax rates among municipalities to identify higher or lower taxed areas.
+- **Impact Assessment:** Evaluate the impact of tax rate changes on municipal revenue.
+- **Data Visualization:** Create visualizations to depict tax rate trends and comparisons for easy interpretation.
 
 ## Data Requirements
-- **Data Source:** Traffic Tickets Issued: Four Year Window dataset from New York State Open Data.
-- **Data Characteristics:** The dataset contains detailed records of every traffic ticket issued, including date, location, violator demographics, and violation type.
-- **Data Collection Methodology:** Data is collected at the point of issuance by law enforcement officers and compiled into the NYSDMV database. The dataset is updated periodically to reflect new data and changes.
-- https://data.ny.gov/Transportation/Traffic-Tickets-Issued-Four-Year-Window/q4hy-kbtf/about_data
-- https://data.ny.gov/api/views/q4hy-kbtf/files/C6gwPCdHCxpNxC0szKY_tXKFORek72pOffkDhBqgFXU?download=true&filename=NYSDMV_Ticket_Data_Overview.pdf
-- https://data.ny.gov/api/views/q4hy-kbtf/files/YpjZeFFvj4Xc5kAgir7bkIx2GfhhKwfOpQUmKvrwWRE?download=true&filename=NYSDMV_OpenData_Tickets_DataDictionary.pdf
+- **Data Source:** [New York State Open Data - Real Property Tax Rates & Levy Data by Municipality](https://data.ny.gov/Government-Finance/Real-Property-Tax-Rates-Levy-Data-By-Municipality-/iq85-sdzs/about_data)
+- https://data.ny.gov/api/views/iq85-sdzs/files/IS2_RtSkdx-VSo70Cc8zaTTW7hXPRlNtdAHLdv8wvig?download=true&filename=DTF_NYSREALPROPERTYTAXRATESLEVYDATABYMUNICIPALITYBEGINNING2004_Overview.pdf
+- https://data.ny.gov/api/views/iq85-sdzs/files/epEmWMqBfPmgCVuL1X0jbGSnNrt_4GQVRH2jREEYzdI?download=true&filename=DTF_NYSREALPROPERTYTAXRATESLEVYDATABYMUNICIPALITYBEGINNING2004_DataDictionary.pdf
+- **Data Collection Methodology:** The dataset is compiled annually by the Department of Taxation and Finance and includes details such as tax rates, levy amounts, and municipal identifiers.
 
-## Technologies Used
-- **Data Storage and Transformation:** Utilizes PostgreSQL for data storage and dbt (Data Build Tool) for data transformation.
-- **Data Analysis:** SQL for structured queries and data manipulation.
-- **Visualization and Reporting:** PowerBI for dynamic, interactive dashboards and visualizations.
+## Business Impact
+By analyzing this dataset, stakeholders can gain a clear understanding of how property taxes are distributed and how they evolve. This facilitates better financial and policy planning, potentially leading to more equitable tax measures. Enhanced transparency in tax data can also increase public trust and engagement, providing residents with a clear view of where and how their taxes are utilized.
+
+## Data Collection & Storage Details
+This dataset is obtained directly from the New York State Open Data portal, ensuring accuracy and reliability. It is stored in a CSV format, making it accessible and easy to manipulate for further analysis.
 
 
 
