@@ -6,12 +6,12 @@ SELECT
     MD5(county) AS county_id,
     MD5(school_name) AS school_district_id,
     county_tax_levy,
-    county_tax_rate_outside_village_per_1000_assessed_value,
-    county_tax_rate_inside_village_per_1000_assessed_value,
+    county_tax_rate_outside_village_per_1000_value,
+    county_tax_rate_inside_village_per_1000_value,
     municipality_tax_levy,
-    municipal_tax_rate_outside_village_per_1000_assessed_value,
-    municipal_tax_rate_inside_village_per_1000_assessed_value,
+    municipal_tax_rate_outside_village_per_1000_value,
+    municipal_tax_rate_inside_village_per_1000_value,
     school_district_tax_levy,
-    school_district_tax_rate_per_1000_assessed_value
+     school_district_tax_rate_per_1000_value
 FROM 
     `cis4400-hw-443410.cleaned_data.property_tax_rates`;
