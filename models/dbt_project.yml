@@ -1,0 +1,51 @@
+name: "property_tax_project"  # Replace with your actual project name
+version: "1.0.0"
+config-version: 2
+
+profile: "property_tax_project"  # Should match the profile name in profiles.yml
+
+# Define where dbt should look for models and configurations.
+model-paths: ["models"]  # Updated to model-paths as per the deprecation warning
+analysis-paths: ["analysis"]  # Location for analysis models
+target-path: "target"  # Location for compiled and run results
+clean-targets: ["target", "dbt_modules"]  # Folders to clean during dbt clean
+
+# Define the default materialization and configurations for each folder in the project
+models:
+  property_tax_project:  # Replace with your project name
+    # Set default configs for the entire project
+    +materialized: view  # Default materialization for all models in the project
+    +schema: "analysis"  # Default schema for all models
+
+    staging:
+      +schema: "staging"  # Separate schema for staging models
+      +materialized: view  # Use views for staging models to reduce storage costs
+
+    datamart:
+      +schema: "datamart"  # Separate schema for datamart models (e.g., fact and dimension tables)
+      +materialized: table  # Materialize dim and fact tables as tables for better performance
+
+# Define tests and configurations for all seed files (if any) in the project
+seeds:
+  property_tax_project:
+    +schema: "raw_data"  # Location for raw data seeds, typically before transformation
+    +quote_columns: true  # Quotes column names in seed files to avoid conflicts with SQL keywords
+
+# Add macros directory if any custom macros are used in this project
+macro-paths: ["macros"]  # Location for reusable dbt macros
+
+# Set up variables that might be used in the project
+vars:
+  date_cutoff: "2024-01-01"  # Example variable to filter models based on a date
+  environment: "dev"  # Environment variable for development configurations
+
+# Configurations for snapshots (if used)
+snapshots:
+  property_tax_project:
+    +schema: "snapshots"  # Schema for snapshot tables to track historical data
+
+# Documentation paths
+docs-paths: ["docs"]  # Location for project documentation files
+
+# Packages directory (if you are using dbt packages)
+packages-install-path: "dbt_packages"
