@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: property_tax_analysis
+    description: "Analyzes real property tax rates and levies for various municipalities and school districts."
+    columns:
+      - name: fiscal_year_ending
+        description: "The fiscal year end date for the tax data."
+      - name: roll_year
+        description: "The roll year for which the tax rates and levies apply."
+      - name: swis_code
+        description: "The unique identifier for the municipality as per SWIS coding."
+      - name: municipality
+        description: "The name of the municipality where the tax rates and levies apply."
+      - name: county
+        description: "The name of the county where the municipality is located."
+      - name: school_code
+        description: "The unique identifier for the school district."
+      - name: school_name
+        description: "The name of the school district."
+      - name: type_of_value_on_whichtax_rates_are_applied
+        description: "Indicates whether tax rates are applied to full value or assessed value."
+      - name: county_tax_levy
+        description: "The total tax levy imposed by the county."
+      - name: county_tax_rate_outside_village_per_1000_assessed_value
+        description: "The county tax rate for areas outside villages per $1,000 of assessed value."
+      - name: county_tax_rate_inside_village_per_1000_assessed_value
+        description: "The county tax rate for areas inside villages per $1,000 of assessed value."
+      - name: municipality_tax_levy
+        description: "The total tax levy imposed by the municipality."
+      - name: municipal_tax_rate_outside_village_per_1000_assessed_value
+        description: "The municipal tax rate for areas outside villages per $1,000 of assessed value."
+      - name: municipal_tax_rate_inside_village_per_1000_assessed_value
+        description: "The municipal tax rate for areas inside villages per $1,000 of assessed value."
+      - name: school_district_tax_levy
+        description: "The total tax levy imposed by the school district."
+      - name: school_district_tax_rate_per_1000_assessed_value
+        description: "The school district tax rate per $1,000 of assessed value."
+
