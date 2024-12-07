@@ -28,7 +28,7 @@ models:
         description: "The unique code identifying the school district."
       - name: school_name
         description: "The name of the school district."
-      - name: type_of_value_on_whichtax_rates_are_applied
+      - name: type_of_value_on_which_tax_rates_are_applied
         description: "The type of value used as the basis for calculating tax rates (e.g., assessed value)."
       - name: county_tax_levy
         description: "The total county tax levy amount."
