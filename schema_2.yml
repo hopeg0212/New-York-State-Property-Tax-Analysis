@@ -1,0 +1,55 @@
+version: 2
+
+models:
+  - name: dim_county
+    description: "Dimension table containing unique county information."
+    columns:
+      - name: county_id
+        description: "Unique hashed identifier for each county."
+        tests:
+          - not_null
+          - unique
+      - name: county
+        description: "Name of the county."
+        tests:
+          - not_null
+
+  - name: dim_municipality
+    description: "Dimension table containing unique municipality information."
+    columns:
+      - name: municipality_id
+        description: "Unique hashed identifier for each municipality."
+        tests:
+          - not_null
+          - unique
+      - name: municipality
+        description: "Name of the municipality."
+        tests:
+          - not_null
+      - name: county
+        description: "The county to which the municipality belongs."
+
+  - name: dim_school_district
+    description: "Dimension table containing unique school district information."
+    columns:
+      - name: school_district_id
+        description: "Unique hashed identifier for each school district."
+        tests:
+          - not_null
+          - unique
+      - name: school_name
+        description: "Name of the school district."
+        tests:
+          - not_null
+      - name: school_code
+        description: "School district code."
+
+  - name: dim_fiscal_year
+    description: "Dimension table containing fiscal year and roll year mapping."
+    columns:
+      - name: fiscal_year
+        description: "The fiscal year ending date."
+        tests:
+          - not_null
+      - name: roll_year
+        description: "The roll year associated with the fiscal year."
