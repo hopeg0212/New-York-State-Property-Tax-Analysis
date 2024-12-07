@@ -6,34 +6,63 @@ models:
     columns:
       - name: fiscal_year_ending
         description: "The fiscal year end date for the tax data."
+        tests:
+          - not_null
       - name: roll_year
         description: "The roll year for which the tax rates and levies apply."
+        tests:
+          - not_null
       - name: swis_code
         description: "The unique identifier for the municipality as per SWIS coding."
+        tests:
+          - not_null
       - name: municipality
         description: "The name of the municipality where the tax rates and levies apply."
+        tests:
+          - not_null
       - name: county
         description: "The name of the county where the municipality is located."
+        tests:
+          - not_null
       - name: school_code
         description: "The unique identifier for the school district."
       - name: school_name
         description: "The name of the school district."
-      - name: type_of_value_on_whichtax_rates_are_applied
+        tests:
+          - not_null
+      - name: type_of_value_on_which_tax_rates_are_applied
         description: "Indicates whether tax rates are applied to full value or assessed value."
       - name: county_tax_levy
         description: "The total tax levy imposed by the county."
+        tests:
+          - not_null
+          - numeric
       - name: county_tax_rate_outside_village_per_1000_assessed_value
         description: "The county tax rate for areas outside villages per $1,000 of assessed value."
+        tests:
+          - numeric
       - name: county_tax_rate_inside_village_per_1000_assessed_value
         description: "The county tax rate for areas inside villages per $1,000 of assessed value."
+        tests:
+          - numeric
       - name: municipality_tax_levy
         description: "The total tax levy imposed by the municipality."
+        tests:
+          - numeric
       - name: municipal_tax_rate_outside_village_per_1000_assessed_value
         description: "The municipal tax rate for areas outside villages per $1,000 of assessed value."
+        tests:
+          - numeric
       - name: municipal_tax_rate_inside_village_per_1000_assessed_value
         description: "The municipal tax rate for areas inside villages per $1,000 of assessed value."
+        tests:
+          - numeric
       - name: school_district_tax_levy
         description: "The total tax levy imposed by the school district."
+        tests:
+          - not_null
+          - numeric
       - name: school_district_tax_rate_per_1000_assessed_value
         description: "The school district tax rate per $1,000 of assessed value."
-
+        tests:
+          - numeric
