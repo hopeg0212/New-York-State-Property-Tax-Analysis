@@ -47,7 +47,7 @@ models:
   - name: dim_fiscal_year
     description: "Dimension table containing fiscal year and roll year mapping."
     columns:
-      - name: fiscal_year
+      - name: fiscal_year_ending
         description: "The fiscal year ending date."
         tests:
           - not_null
